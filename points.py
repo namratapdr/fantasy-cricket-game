@@ -1,11 +1,12 @@
-#man of the match module
-'''This modules assigns points to the Player for the man of the match calculation'''
+
+'''This modules calculates points for each Player in a team'''
 import math
 def bat(p):
     "To calculate points for a batsman"
     batscore = 0
     strike_rate = 0
     if p[2] > 0:
+        #calculating the strike rate of the batsman
         strike_rate = int(p[1]/p[2] * 100)
         #Points for runs scored
         batscore += math.floor(p[1]/2)
